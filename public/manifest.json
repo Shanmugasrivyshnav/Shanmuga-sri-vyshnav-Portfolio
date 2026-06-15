@@ -3,17 +3,17 @@
   "name": "Create React App Sample",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "web-logo-shannu-png",
+      "sizes": "70x70 38x38 30x30 22x22",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "web-logo-shannu-png.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "web-logo-shannu-png.png",
       "type": "image/png",
       "sizes": "512x512"
     }
