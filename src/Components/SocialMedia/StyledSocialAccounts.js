@@ -62,5 +62,6 @@ export const SocialLink = styled.a`
   &:hover {
     background: ${(props) => props.theme.colorAccentSoft};
     transform: translateY(-2px);
+    background-color: transparent;
   }
 `;

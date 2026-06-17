@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const HomeSection = styled.section`
   display: grid;
@@ -19,18 +19,51 @@ export const HomeContent = styled.div`
   max-width: 640px;
 `;
 
+const shine = keyframes`
+  0% {
+    transform: translateX(-120%);
+  }
+  50% {
+    transform: translateX(120%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+`;
+
 export const HomeBadge = styled.div`
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 16px;
+  justify-content: center;
+  padding: 12px 18px;
   margin-bottom: 24px;
-  border-radius: 999px;
-  background: ${(props) => props.theme.colorAccentSoft};
-  color: ${(props) => props.theme.colorAccent};
+  border-radius: 20px;
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
   font-weight: 700;
-  letter-spacing: 0.02em;
-  font-size: 14px;
+
+  &:before {
+    transform: translateX(-120%);
+    animation: ${shine} 3s ease-in-out infinite;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
+
+export const HomeBadgeText = styled.span`
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  min-width: 200px;
+  text-align: center;
+  letter-spacing: 0.64px;
+  text-transform: uppercase;
 `;
 
 export const HomeHeading = styled.h1`

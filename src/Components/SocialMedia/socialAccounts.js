@@ -7,7 +7,13 @@ import {
   SocialLinkItem,
   SocialLink,
 } from "./StyledSocialAccounts";
-import { FaGithub, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
 
 const socials = [
   {
@@ -17,17 +23,22 @@ const socials = [
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/shanmugasrivyshnav",
+    href: "https://www.linkedin.com/in/shanmuga-sree-vyshnav/",
     icon: FaLinkedin,
   },
   {
     label: "Instagram",
-    href: "https://instagram.com/shanmugasrivyshnav",
+    href: "https://www.instagram.com/sha_sync__/",
     icon: FaInstagram,
   },
   {
+    label: "Youtube",
+    href: "https://www.youtube.com/@shanmukha_sri",
+    icon: FaYoutube,
+  },
+  {
     label: "Twitter",
-    href: "https://twitter.com/shanmugasrivyshnav",
+    href: "https://x.com/shanmukha_sri_",
     icon: FaTwitter,
   },
 ];
