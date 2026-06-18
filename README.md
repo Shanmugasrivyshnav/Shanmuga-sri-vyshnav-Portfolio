@@ -11,6 +11,9 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+<br/> Runs the app in the browser <br/>
+open [https://shanmuga-sri-vyshnav-portfolio.vercel.app/](https://shanmuga-sri-vyshnav-portfolio.vercel.app/) to view.
+
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
