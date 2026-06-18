@@ -74,7 +74,7 @@ const Home = () => {
       return () => clearInterval(timer);
     };
 
-    const Experience = animateValue(3, 1500, setYearsExp);
+    const Experience = animateValue(3, 2500, setYearsExp);
     const Projects = animateValue(10, 1500, setProjects);
     const Technologies = animateValue(5, 1500, setTechnologies);
 
@@ -114,22 +114,30 @@ const Home = () => {
           <HomeAction as={Link} to="/projects">
             View Projects <MdArrowForward size={20} />
           </HomeAction>
+          <HomeAction as={Link} to="/certifecates">
+            View Certificates <MdArrowForward size={20} />
+          </HomeAction>
           <HomeAction as={Link} to="/contact" secondary>
             Contact Me
           </HomeAction>
         </HomeActions>
 
         <HomeStats>
-          {[
-            { value: `${yearsExp}+`, label: "Years Experience" },
-            { value: `${projects}+`, label: "Projects" },
-            { value: `${technologies}+`, label: "Technologies" },
-          ].map((stat) => (
-            <HomeStat key={stat.label}>
-              <HomeStatValue>{stat.value}</HomeStatValue>
-              <HomeStatLabel>{stat.label}</HomeStatLabel>
-            </HomeStat>
-          ))}
+          {stats.map((stat) => {
+            const value =
+              stat.label === "Years Experience"
+                ? `${yearsExp}+`
+                : stat.label === "Projects"
+                  ? `${projects}+`
+                  : `${technologies}+`;
+
+            return (
+              <HomeStat key={stat.label}>
+                <HomeStatValue>{value}</HomeStatValue>
+                <HomeStatLabel>{stat.label}</HomeStatLabel>
+              </HomeStat>
+            );
+          })}
         </HomeStats>
       </HomeContent>
       <HeroVisual>

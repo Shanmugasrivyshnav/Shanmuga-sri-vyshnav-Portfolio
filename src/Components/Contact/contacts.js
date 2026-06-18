@@ -47,12 +47,20 @@ const Contacts = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          name: form.name.trim(),
+          email: form.email.trim(),
+          subject: form.subject.trim(),
+          message: form.message.trim(),
+        }),
       });
 
+      const result = await response.json();
+
       if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || "Unable to send message.");
+        throw new Error(
+          result.message || result.error || "Unable to send message.",
+        );
       }
 
       setStatus("success");
@@ -121,9 +129,14 @@ const Contacts = () => {
               rows={6}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
             />
-            <ContactButton type="submit">Send Message</ContactButton>
+            <ContactButton type="submit" disabled={status === "sending"}>
+              {status === "sending" ? "Sending..." : "Send Message"}
+            </ContactButton>
             {status && (
-              <StatusMessage $success={status === "success"}>
+              <StatusMessage
+                $success={status === "success"}
+                $error={status === "error"}
+              >
                 {status === "sending"
                   ? "Sending message..."
                   : status === "error"

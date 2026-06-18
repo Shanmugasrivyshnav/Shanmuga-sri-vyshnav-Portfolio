@@ -108,7 +108,11 @@ export const ContactButton = styled.button`
   color: #fff;
   font-weight: 700;
   cursor: pointer;
-  transition: transform 0.25s ease;
+  opacity: ${(props) => (props.disabled ? 0.65 : 1)};
+  pointer-events: ${(props) => (props.disabled ? "none" : "auto")};
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
 
   &:hover {
     transform: translateY(-1px);
@@ -117,6 +121,7 @@ export const ContactButton = styled.button`
 
 export const StatusMessage = styled.p`
   margin: 0;
-  color: ${(props) => (props.$success ? "#16a34a" : "#2563eb")};
+  color: ${(props) =>
+    props.$success ? "#16a34a" : props.$error ? "#dc2626" : "#2563eb"};
   font-weight: 600;
 `;

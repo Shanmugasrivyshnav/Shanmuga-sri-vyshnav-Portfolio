@@ -8,6 +8,7 @@ import {
   MdContactMail,
   MdDashboard,
   MdDownload,
+  MdWorkspacePremium,
 } from "react-icons/md";
 import { RiMenu5Line, RiCloseLine } from "react-icons/ri";
 import {
@@ -80,6 +81,18 @@ const NavBar = ({ isDarkMode, toggleTheme }) => {
             <MdDashboard />
           </HeaderElementIcons>
           Projects
+        </HeaderElement>
+        <HeaderElement
+          as={NavLink}
+          to="/certifecates"
+          className={({ isActive }) => (isActive ? "active" : undefined)}
+          onClick={() => setIsMobileMenuOpen(false)}
+          isDarkMode={isDarkMode}
+        >
+          <HeaderElementIcons>
+            <MdWorkspacePremium />
+          </HeaderElementIcons>
+          Certificates
         </HeaderElement>
         <HeaderElement
           as={NavLink}
