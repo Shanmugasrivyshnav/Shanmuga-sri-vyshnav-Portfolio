@@ -19,8 +19,7 @@ const projectList = [
     description:
       "A responsive personal portfolio to showcase projects, skills, and contact details.",
     tags: ["React", "Styled Components", "Responsive"],
-    github:
-      "https://github.com/Shanmugasrivyshnav/Shanmuga-sri-vyshnav-Portfolio",
+    github: "",
   },
   {
     title: "Crypto Currency Ui",
