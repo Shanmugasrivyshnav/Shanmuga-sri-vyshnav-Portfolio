@@ -22,6 +22,13 @@ const projectList = [
     github: "https://github.com/Shanmugasrivyshnav/portfolio-website",
   },
   {
+    title: "Crypto Currency Ui",
+    description:
+      "A Frontend cryptocurrency to showcase  Prices and Crypto details.",
+    tags: ["React", "Responsive"],
+    github: "https://github.com/Shanmugasrivyshnav/cryptocurrency-ui-React-",
+  },
+  {
     title: "Task Manager App",
     description:
       "A full stack task management system with CRUD and authentication support.",
