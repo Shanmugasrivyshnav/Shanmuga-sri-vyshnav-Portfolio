@@ -11,15 +11,24 @@ import {
   ProjectTag,
   ProjectLinks,
   ProjectLink,
+  MoreOnGitHubContainer,
+  HeadingGitHub,
+  LinkGitHub,
 } from "./StyledProjects";
 
+const GitHubLink = [
+  {
+    gitHublink: "https://github.com/Shanmugasrivyshnav?tab=repositories",
+  },
+];
 const projectList = [
   {
     title: "Portfolio Website",
     description:
       "A responsive personal portfolio to showcase projects, skills, and contact details.",
     tags: ["React", "Styled Components", "Responsive"],
-    github: "",
+    github:
+      "https://github.com/Shanmugasrivyshnav/Shanmuga-sri-vyshnav-Portfolio",
   },
   {
     title: "Crypto Currency Ui",
@@ -29,18 +38,19 @@ const projectList = [
     github: "https://github.com/Shanmugasrivyshnav/cryptocurrency-ui-React-",
   },
   {
-    title: "Task Manager App",
+    title: "Login UI",
     description:
-      "A full stack task management system with CRUD and authentication support.",
+      "A basic of Login page with react UI with username and password.",
     tags: ["Node.js", "Express", "MongoDB"],
-    github: "https://github.com/Shanmugasrivyshnav/task-manager-app",
+    github: "https://github.com/Shanmugasrivyshnav/basic_login-app_React",
   },
   {
-    title: "Expense Tracker",
+    title: "Expense Tracker UI",
     description:
       "Track expenses and visualize spending with charts and filters.",
-    tags: ["React", "Chart.js", "CSS"],
-    github: "https://github.com/Shanmugasrivyshnav/expense-tracker",
+    tags: ["React", "CSS", "JS"],
+    github:
+      "https://github.com/Shanmugasrivyshnav/basic-expensive-manager_React",
   },
 ];
 
@@ -77,6 +87,16 @@ const Projects = () => {
           </ProjectCard>
         ))}
       </ProjectsGrid>
+      <MoreOnGitHubContainer>
+        <HeadingGitHub>More on GitHub Repository</HeadingGitHub>
+        <LinkGitHub
+          href={GitHubLink[0].gitHublink}
+          target="_blank"
+          alt="Link of GitHub"
+        >
+          Click to view Repositories
+        </LinkGitHub>
+      </MoreOnGitHubContainer>
     </ProjectsSection>
   );
 };

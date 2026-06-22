@@ -98,3 +98,50 @@ export const ProjectLink = styled.a`
     background: #4f46e5;
   }
 `;
+export const MoreOnGitHubContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  justify-content: center;
+  width: 50%;
+  background: ${(props) => props.theme.colorCard};
+  border: 1px solid ${(props) => props.theme.colorBorder};
+  border-radius: 24px;
+  padding: 26px;
+  gap: 18px;
+  box-shadow: ${(props) => props.theme.shadow};
+  @media screen and (max-width: 980px) {
+    width: 100%;
+  }
+`;
+
+export const HeadingGitHub = styled.h2`
+  max-width: 760px;
+  margin: 0 auto 20px;
+  text-align: center;
+
+  &::after {
+    content: "";
+    display: block;
+    width: auto;
+    height: 4px;
+    background: ${(props) => props.theme.colorBorder};
+    margin: 0 auto 0;
+    border-radius: 2px;
+  }
+`;
+export const LinkGitHub = styled.a`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: ${(props) => props.theme.colorAccent};
+  color: #fff;
+  font-weight: 700;
+  transition: transform 0.25s ease;
+  &:hover {
+    transform: translateY(-1px);
+    background: #4f46e5;
+  }
+`;
