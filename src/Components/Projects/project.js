@@ -31,14 +31,7 @@ const projectList = [
       "https://github.com/Shanmugasrivyshnav/Shanmuga-sri-vyshnav-Portfolio",
   },
   {
-    title: "Crypto Currency Ui",
-    description:
-      "A Frontend cryptocurrency to showcase  Prices and Crypto details.",
-    tags: ["React", "Responsive"],
-    github: "https://github.com/Shanmugasrivyshnav/cryptocurrency-ui-React-",
-  },
-  {
-    title: "Crypto Currency Ui",
+    title: "Crypto Currency UI",
     description:
       "A Frontend cryptocurrency to showcase  Prices and Crypto details.",
     tags: ["React", "Responsive"],
