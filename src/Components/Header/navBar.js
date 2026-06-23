@@ -37,7 +37,9 @@ const NavBar = ({ isDarkMode, toggleTheme }) => {
   return (
     <HeaderContainer>
       <HeaderImageContainer>
-        <Logo src={isDarkMode ? lightLogo : darkLogo} alt="Portfolio Logo" />
+        <NavLink to="/" onClick={() => setIsMobileMenuOpen(false)}>
+          <Logo src={isDarkMode ? lightLogo : darkLogo} alt="Portfolio Logo" />
+        </NavLink>
       </HeaderImageContainer>
 
       <MobileMenuBtn onClick={toggleMenu} isDarkMode={isDarkMode}>
