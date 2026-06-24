@@ -20,7 +20,7 @@ const contactDetails = [
     value: "Shanmukhasri00@gmail.com",
     href: "mailto:Shanmukhasri00@gmail.com",
   },
-  { label: "Phone", value: "+91 7995247940", href: "tel:+917995247940" },
+  { label: "Phone", value: "IN Resume", href: "tel:+917995247940" },
   {
     label: "Location",
     value: "Anantapur, Andhra Pradesh",
