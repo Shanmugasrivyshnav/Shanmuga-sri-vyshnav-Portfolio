@@ -13,7 +13,7 @@ export const FooterContent = styled.div`
   max-width: 1160px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 20px;
   @media (max-width: 720px) {
@@ -25,6 +25,17 @@ export const FooterContent = styled.div`
 export const FooterText = styled.p`
   margin: 0;
   color: ${(props) => props.theme.colorTextMuted};
+`;
+
+export const FooterLinkContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  @media (max-width: 720px) {
+    justify-content: center;
+  }
+  justify-content: center;
+  flex-direction: column;
 `;
 
 export const FooterNav = styled.nav`
