@@ -23,8 +23,7 @@ export const SectionIntro = styled.p`
   margin: 0;
   color: ${(props) => props.theme.colorTextMuted};
   line-height: 1.8;
-  // max-width: 620px;
-  width:50%;
+  max-width: 720px;
   margin-left: auto;
   margin-right: auto;
 `;
