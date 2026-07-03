@@ -24,7 +24,7 @@ Welcome to my personal portfolio repository! This website showcases my projects,
 
 ## 🚀 Live Portfolio
 
-🔗 **Portfolio Website:** *( [https://shanmuga-sri-vyshnav-portfolio.vercel.app/](https://shanmuga-sri-vyshnav-portfolio.vercel.app/))*
+🔗 **Portfolio Website:** *(https://shanmuga-sri-vyshnav-portfolio.vercel.app/)*
 
 ---
 
