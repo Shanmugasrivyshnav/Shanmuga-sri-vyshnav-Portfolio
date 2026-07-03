@@ -1,23 +1,3 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-<br/> Runs the app in the browser <br/>
-open [https://shanmuga-sri-vyshnav-portfolio.vercel.app/](https://shanmuga-sri-vyshnav-portfolio.vercel.app/) to view.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-```markdown
 # 🌐 Shanmuga Sri Vyshnav Portfolio
 
 Welcome to my personal portfolio repository! This website showcases my projects, technical skills, certifications, and achievements as a Computer Science student and aspiring Software Engineer.
@@ -80,6 +60,28 @@ I'm passionate about building scalable web applications, solving real-world prob
 ```
 
 ---
+
+
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+<br/> Runs the app in the browser <br/>
+open [https://shanmuga-sri-vyshnav-portfolio.vercel.app/](https://shanmuga-sri-vyshnav-portfolio.vercel.app/) to view.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+```markdown
 
 ## 🚀 Getting Started
 
