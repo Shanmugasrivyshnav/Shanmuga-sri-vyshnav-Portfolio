@@ -35,7 +35,6 @@ I'm passionate about building scalable web applications, solving real-world prob
 - CSS3
 - JavaScript
 - React.js
-- Bootstrap
 - Java Script CSS
 
 ### Tools
@@ -58,6 +57,39 @@ I'm passionate about building scalable web applications, solving real-world prob
 
 ---
 ```
+## 📈 Future Improvements
+
+* Blog Section
+* Project Filtering
+* Animations
+* Multi-language Support
+
+---
+
+## 🤝 Connect With Me
+
+* GitHub: https://github.com/Shanmugasrivyshnav
+* LinkedIn: *(https://www.linkedin.com/in/shanmuga-sree-vyshnav/)*
+* Email: *(shanmukhasri00@gmail.com)*
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+Made with ❤️ by **Shanmuga Sri Vyshnav**
+
+```
+
 
 ---
 
@@ -108,38 +140,6 @@ Open `index.html` in your browser.
 
 ---
 
-## 📈 Future Improvements
-
-* Blog Section
-* Project Filtering
-* Animations
-* Multi-language Support
-
----
-
-## 🤝 Connect With Me
-
-* GitHub: https://github.com/Shanmugasrivyshnav
-* LinkedIn: *(https://www.linkedin.com/in/shanmuga-sree-vyshnav/)*
-* Email: *(shanmukhasri00@gmail.com)*
-
----
-
-## ⭐ Support
-
-If you like this project, consider giving it a ⭐ on GitHub.
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
-
-Made with ❤️ by **Shanmuga Sri Vyshnav**
-
-```
 ```
 
 ### `npm test`
