@@ -16,22 +16,29 @@ const Resume = () => {
           <br />
           It contains my work experience, skills, and contact information.
         </ResumeText>
-        {/* To use your own file, replace the existing PDF at public/resume.pdf
-        with your resume document. */}
         <ResumeTitle>Full-Stack Resume Download</ResumeTitle>
-        <ResumeButton href="/resume.pdf" download>
+        <ResumeButton
+          href="/kg_shanmuga_sri_vyshnav_fullstack_resume.pdf"
+          download="Full-Stack-Resume.pdf"
+        >
           Download Resume
         </ResumeButton>
       </ResumeContent>
       <ResumeContent>
         <ResumeTitle>Frontend Resume Download</ResumeTitle>
-        <ResumeButton href="/frontend_Resume.pdf" download>
+        <ResumeButton
+          href="/kg_shanmuga_sri_vyshnav_frontend_resume.pdf"
+          download="Frontend-Resume.pdf"
+        >
           Download Resume
         </ResumeButton>
       </ResumeContent>
       <ResumeContent>
         <ResumeTitle>Backend Resume Download</ResumeTitle>
-        <ResumeButton href="/backend_Resume.pdf" download>
+        <ResumeButton
+          href="/kg_shanmuga_sri_vyshnav_backend_resume.pdf"
+          download="Backend-Resume.pdf"
+        >
           Download Resume
         </ResumeButton>
       </ResumeContent>

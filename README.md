@@ -1,3 +1,99 @@
+# 🌐 Shanmuga Sri Vyshnav Portfolio
+
+Welcome to my personal portfolio repository! This website showcases my projects, technical skills, certifications, and achievements as a Computer Science student and aspiring Software Engineer.
+
+## 🚀 Live Portfolio
+
+🔗 **Portfolio Website:** *(https://shanmuga-sri-vyshnav-portfolio.vercel.app/)*
+
+---
+
+## 👨‍💻 About Me
+
+Hi, I'm **Shanmuga Sri Vyshnav**.
+
+I'm passionate about building scalable web applications, solving real-world problems through software, and continuously learning modern technologies.
+
+### Interests
+
+- Full Stack Web Development
+- Open Source
+- Software Engineering
+- frontend developement
+- backend developement
+---
+
+## 🛠️ Tech Stack
+
+### Languages
+
+- JavaScript
+- React js 
+### Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+- React.js
+- Java Script CSS
+
+### Tools
+
+- Git
+- GitHub
+- VS Code
+---
+
+## ✨ Features
+
+- Responsive Design
+- Modern UI/UX
+- Dark Theme
+- Project Showcase
+- Skills Section
+- Education Timeline
+- Certifications
+- Contact Form
+
+---
+```
+## 📈 Future Improvements
+
+* Blog Section
+* Project Filtering
+* Animations
+* Multi-language Support
+
+---
+
+## 🤝 Connect With Me
+
+* GitHub: https://github.com/Shanmugasrivyshnav
+* LinkedIn: *(https://www.linkedin.com/in/shanmuga-sree-vyshnav/)*
+* Email: *(shanmukhasri00@gmail.com)*
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+Made with ❤️ by **Shanmuga Sri Vyshnav**
+
+```
+
+
+---
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -16,6 +112,35 @@ open [https://shanmuga-sri-vyshnav-portfolio.vercel.app/](https://shanmuga-sri-v
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+```markdown
+
+## 🚀 Getting Started
+
+Clone the repository
+
+```bash
+git clone https://github.com/Shanmugasrivyshnav/Shanmuga-sri-vyshnav-Portfolio.git
+````
+
+Go to the project directory
+
+```bash
+cd Shanmuga-sri-vyshnav-Portfolio
+```
+
+Open `index.html` in your browser.
+
+---
+
+## 📸 Preview
+
+> Added portfolio here.
+> open [https://shanmuga-sri-vyshnav-portfolio.vercel.app/](https://shanmuga-sri-vyshnav-portfolio.vercel.app/) to view.
+
+---
+
+```
 
 ### `npm test`
 
