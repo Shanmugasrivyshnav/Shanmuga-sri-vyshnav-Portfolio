@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ResumeSection = styled.section`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: calc(100vh - 90px);
@@ -12,6 +13,11 @@ export const ResumeSection = styled.section`
   box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
   margin: 32px auto;
   max-width: 860px;
+  @media (max-width: 768px) {
+    padding: 32px 16px;
+    // flex-direction: row;
+    flex-wrap: wrap;
+  }
 `;
 
 export const ResumeContent = styled.div`

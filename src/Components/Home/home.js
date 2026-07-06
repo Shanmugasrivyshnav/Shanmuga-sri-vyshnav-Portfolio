@@ -32,7 +32,7 @@ const featureTags = [
   "HTML",
 ];
 const stats = [
-  { value: "3+", label: "Years Experience in Core" },
+  { value: "3", label: "Years Experience in Core" },
   { value: "10+", label: "Projects" },
   { value: "7+", label: "Technologies" },
 ];
@@ -51,7 +51,7 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setjobTitles((prevjob) => (prevjob + 1) % titlesJobs.length);
-    }, 3000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
@@ -59,7 +59,7 @@ const Home = () => {
   useEffect(() => {
     const animateValue = (end, duration, setter) => {
       let current = 0;
-      const increment = end / (duration / 16);
+      const increment = end / (duration / 10);
 
       const timer = setInterval(() => {
         current += increment;
@@ -69,7 +69,7 @@ const Home = () => {
         } else {
           setter(Math.floor(current));
         }
-      }, 16);
+      }, 10);
 
       return () => clearInterval(timer);
     };
@@ -126,7 +126,7 @@ const Home = () => {
           {stats.map((stat) => {
             const value =
               stat.label === "Years Experience"
-                ? `${yearsExp}+`
+                ? `${yearsExp}`
                 : stat.label === "Projects"
                   ? `${projects}+`
                   : `${technologies}+`;
