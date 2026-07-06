@@ -25,16 +25,13 @@ const Resume = () => {
       </ResumeContent>
       <ResumeContent>
         <ResumeTitle>Frontend Resume Download</ResumeTitle>
-        <ResumeButton
-          href="/KG_ShanmugaSriVyshnav_frontend_Resume.pdf"
-          download
-        >
+        <ResumeButton href="/frontend_Resume.pdf" download>
           Download Resume
         </ResumeButton>
       </ResumeContent>
       <ResumeContent>
         <ResumeTitle>Backend Resume Download</ResumeTitle>
-        <ResumeButton href="/KG_ShanmugaSriVyshnav_Backend_Resume.pdf" download>
+        <ResumeButton href="/backend_Resume.pdf" download>
           Download Resume
         </ResumeButton>
       </ResumeContent>
