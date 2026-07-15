@@ -1,28 +1,45 @@
 import { Resend } from "resend";
 
-const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
+const resend = process.env.RESEND_API_KEY
+  ? new Resend(process.env.RESEND_API_KEY)
+  : null;
+const fromAddress =
+  process.env.CONTACT_FROM_EMAIL ||
+  "Portfolio Contact Form <onboarding@resend.dev>";
+const recipients = (process.env.CONTACT_NOTIFICATION_EMAIL || "")
+  .split(",")
+  .map((email) => email.trim())
+  .filter(Boolean);
 
 /**
  * Sends a notification email when someone submits the contact form.
  * If RESEND_API_KEY isn't set (e.g. local dev without email configured),
  * this silently no-ops so the contact form still works end-to-end.
  */
-export async function sendContactNotification({ name, email, subject, message }) {
+export async function sendContactNotification({
+  name,
+  email,
+  subject,
+  message,
+}) {
   if (!resend) {
-    console.warn("[mailer] RESEND_API_KEY not set — skipping email notification.");
+    console.warn(
+      "[mailer] RESEND_API_KEY not set — skipping email notification.",
+    );
     return;
   }
 
-  const to = process.env.CONTACT_NOTIFICATION_EMAIL;
-  if (!to) {
-    console.warn("[mailer] CONTACT_NOTIFICATION_EMAIL not set — skipping email notification.");
+  if (recipients.length === 0) {
+    console.warn(
+      "[mailer] CONTACT_NOTIFICATION_EMAIL not set — skipping email notification.",
+    );
     return;
   }
 
   try {
     await resend.emails.send({
-      from: "Portfolio Contact Form <onboarding@resend.dev>",
-      to,
+      from: fromAddress,
+      to: recipients,
       reply_to: email,
       subject: `New portfolio contact: ${subject || "No subject"}`,
       html: `
