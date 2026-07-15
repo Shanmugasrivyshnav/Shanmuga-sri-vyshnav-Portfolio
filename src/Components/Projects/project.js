@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import { getProjects } from "../../services/api.js";
 import {
   ProjectsSection,
   SectionHeader,
@@ -21,7 +23,9 @@ const GitHubLink = [
     gitHublink: "https://github.com/Shanmugasrivyshnav?tab=repositories",
   },
 ];
-const projectList = [
+
+// Default fallback projects if API doesn't return data
+const defaultProjectList = [
   {
     title: "Portfolio Website",
     description:
@@ -55,6 +59,39 @@ const projectList = [
 ];
 
 const Projects = () => {
+  const [projectList, setProjectList] = useState(defaultProjectList);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        setLoading(true);
+        const data = await getProjects();
+        if (data && Array.isArray(data)) {
+          // Map backend data to match component expectations
+          const mappedProjects = data.map((project) => ({
+            title: project.title,
+            description: project.description,
+            tags: project.tags?.map((t) => t.tag?.name || t.name) || [],
+            github: project.github_url || project.github,
+          }));
+          setProjectList(
+            mappedProjects.length > 0 ? mappedProjects : defaultProjectList,
+          );
+        }
+      } catch (err) {
+        console.warn("Failed to fetch projects, using defaults:", err);
+        setError(null); // Don't show error, just use defaults
+        setProjectList(defaultProjectList);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProjects();
+  }, []);
+
   return (
     <ProjectsSection id="projects">
       <SectionHeader>
@@ -64,6 +101,18 @@ const Projects = () => {
           usable, and performant applications.
         </SectionIntro>
       </SectionHeader>
+
+      {loading && (
+        <div style={{ textAlign: "center", padding: "2rem", color: "#666" }}>
+          <p>Loading projects...</p>
+        </div>
+      )}
+
+      {!loading && error && (
+        <div style={{ textAlign: "center", padding: "2rem", color: "#d32f2f" }}>
+          <p>Error loading projects. Showing default projects.</p>
+        </div>
+      )}
 
       <ProjectsGrid>
         {projectList.map((project) => (
