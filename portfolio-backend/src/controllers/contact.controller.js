@@ -6,7 +6,7 @@ export async function submitContactMessage(req, res) {
   const saved = await prisma.contactMessage.create({ data: req.body });
 
   // Fire-and-forget: don't block/fail the response on email delivery
-  sendContactNotification(req.body);
+  await sendContactNotification(req.body);
 
   res.status(201).json({
     success: true,
