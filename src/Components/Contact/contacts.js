@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { submitContactForm } from "../../services/api.js";
 import {
   ContactSection,
   ContactGrid,
@@ -42,26 +43,12 @@ const Contacts = () => {
     setStatus("sending");
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: form.name.trim(),
-          email: form.email.trim(),
-          subject: form.subject.trim(),
-          message: form.message.trim(),
-        }),
+      await submitContactForm({
+        name: form.name.trim(),
+        email: form.email.trim(),
+        subject: form.subject.trim(),
+        message: form.message.trim(),
       });
-
-      const result = await response.json();
-
-      if (!response.ok) {
-        throw new Error(
-          result.message || result.error || "Unable to send message.",
-        );
-      }
 
       setStatus("success");
       setForm({ name: "", email: "", subject: "", message: "" });
