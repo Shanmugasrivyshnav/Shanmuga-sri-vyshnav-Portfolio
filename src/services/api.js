@@ -3,8 +3,36 @@
  * Handles all backend API calls with proper error handling and base URL
  */
 
-const API_BASE_URL =
-  process.env.REACT_APP_API_URL || "http://localhost:5000/api";
+export const getApiBaseUrl = (
+  hostname = typeof window !== "undefined"
+    ? window.location.hostname
+    : "localhost",
+) => {
+  const configuredUrl = process.env.REACT_APP_API_URL?.trim();
+
+  if (configuredUrl) {
+    return configuredUrl.replace(/\/$/, "");
+  }
+
+  if (
+    hostname === "localhost" ||
+    hostname === "127.0.0.1" ||
+    hostname.endsWith(".local")
+  ) {
+    return "http://localhost:5000/api";
+  }
+
+  return "/api";
+};
+
+const API_BASE_URL = getApiBaseUrl();
+
+const buildUrl = (endpoint) => {
+  const normalizedEndpoint = endpoint.startsWith("/")
+    ? endpoint
+    : `/${endpoint}`;
+  return `${API_BASE_URL}${normalizedEndpoint}`;
+};
 
 // Helper function to handle API responses
 const handleResponse = async (response) => {
@@ -22,7 +50,7 @@ const handleResponse = async (response) => {
 // Generic GET request
 export const getRequest = async (endpoint) => {
   try {
-    const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+    const response = await fetch(buildUrl(endpoint), {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -38,7 +66,7 @@ export const getRequest = async (endpoint) => {
 // Generic POST request
 export const postRequest = async (endpoint, data) => {
   try {
-    const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+    const response = await fetch(buildUrl(endpoint), {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
