@@ -19,7 +19,7 @@ const Resume = () => {
         <ResumeTitle>Full-Stack Resume Download</ResumeTitle>
         <ResumeButton
           href="/KG ShanmugaSriVyshnav-FullStack-Resume.pdf"
-          download="KG ShanmugaSriVyshnav-Full-Stack-Resume.pdf"
+          download="ShanmugaSriVyshnav-Full-Stack-Resume.pdf"
         >
           Download Resume
         </ResumeButton>
@@ -28,7 +28,7 @@ const Resume = () => {
         <ResumeTitle>Frontend Resume Download</ResumeTitle>
         <ResumeButton
           href="/KG-ShanmugaSriVyshnav-frontend-Resume.pdf"
-          download="KG ShanmugaSriVyshnav-Frontend-Resume.pdf"
+          download="ShanmugaSriVyshnav-Frontend-Resume.pdf"
         >
           Download Resume
         </ResumeButton>
@@ -37,7 +37,7 @@ const Resume = () => {
         <ResumeTitle>Backend Resume Download</ResumeTitle>
         <ResumeButton
           href="/KG-ShanmugaSriVyshnav-Backend-Resume.pdf"
-          download="KG ShanmugaSriVyshnav-Backend-Resume.pdf"
+          download="ShanmugaSriVyshnav-Backend-Resume.pdf"
         >
           Download Resume
         </ResumeButton>
