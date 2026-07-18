@@ -12,6 +12,7 @@ import {
   AboutLabel,
   AboutValue,
 } from "./StyledAboutme";
+
 import { BsCheckCircleFill } from "react-icons/bs";
 
 const highlights = [
@@ -50,7 +51,12 @@ const AboutMe = () => {
         <SectionTitle>About Me</SectionTitle>
         <SectionIntro>
           I combine technical passion with practical leadership experience to
-          deliver polished web applications and reliable digital products. Results driven Developer with a background in Production Management and a Active foundation in full-stack web development. Active at building scalable systems, optimizing logic, and translating complex data into actionable insights. Strong team managment and process improvement.
+          deliver polished web applications and reliable digital products.
+          Results driven Developer with a background in Production Management
+          and a Active foundation in full-stack web development. Active at
+          building scalable systems, optimizing logic, and translating complex
+          data into actionable insights. Strong team managment and process
+          improvement.
         </SectionIntro>
       </SectionHeader>
 
