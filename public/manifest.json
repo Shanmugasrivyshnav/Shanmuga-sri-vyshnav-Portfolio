@@ -4,7 +4,7 @@
   "icons": [
     {
       "src": "web-logo-shannu-png",
-      "sizes": "70x70 38x38 30x30 22x22",
+      "sizes": "90x90 58x58 50x50 30x30",
       "type": "image/x-icon"
     },
     {
@@ -15,7 +15,7 @@
     {
       "src": "web-logo-shannu-png.png",
       "type": "image/png",
-      "sizes": "612x612"
+      "sizes": "512x512"
 
     }
   ],
