@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "KGSSV portfolio",
+  "name": "KGSSV portfolio",
   "icons": [
     {
       "src": "web-logo-shannu-png",
@@ -15,7 +15,8 @@
     {
       "src": "web-logo-shannu-png.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "612x612"
+
     }
   ],
   "start_url": ".",
