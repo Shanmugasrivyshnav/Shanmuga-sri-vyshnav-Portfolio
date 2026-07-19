@@ -17,6 +17,12 @@
       "type": "image/png",
       "sizes": "512x512"
 
+    },
+    {
+      "src": "web-logo-shannu-png.png",
+      "type": "image/png",
+      "sizes": "1024x1024"
+
     }
   ],
   "start_url": ".",
