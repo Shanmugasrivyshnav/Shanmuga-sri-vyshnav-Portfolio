@@ -11,7 +11,7 @@ import {
   AboutListItem,
   AboutLabel,
   AboutValue,
-} from "./StyledAboutme";
+} from "./StyledAboutMe.js";
 
 import { BsCheckCircleFill } from "react-icons/bs";
 
@@ -55,7 +55,7 @@ const AboutMe = () => {
           Results driven Developer with a background in Production Management
           and a Active foundation in full-stack web development. Active at
           building scalable systems, optimizing logic, and translating complex
-          data into actionable insights. Strong team managment and process
+          data into actionable insights. Strong team management and process
           improvement.
         </SectionIntro>
       </SectionHeader>

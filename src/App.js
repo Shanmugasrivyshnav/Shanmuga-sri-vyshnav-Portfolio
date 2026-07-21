@@ -9,10 +9,10 @@ import { ThemeProvider } from "styled-components";
 import NavBar from "./Components/Header/navBar.js";
 import Home from "./Components/Home/home.js";
 import AboutMe from "./Components/AboutMe/aboutme.js";
-import Certifecates from "./Components/Certifecates/certifecates.js";
+import Certificates from "./Components/Certificates/certificates.js";
 import Projects from "./Components/Projects/project.js";
 import Contacts from "./Components/Contact/contacts.js";
-import ScocialAccount from "./Components/SocialMedia/socialAccounts.js";
+import SocialAccount from "./Components/SocialMedia/socialAccounts.js";
 import Resume from "./Components/Resume/resume.js";
 import Footer from "./Components/Footer/footer.js";
 
@@ -65,13 +65,13 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutMe />} />
-          <Route path="/certifecates" element={<Certifecates />} />
+          <Route path="/certificates" element={<Certificates />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contacts />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-        <ScocialAccount />
+        <SocialAccount />
         <Footer />
       </Router>
     </ThemeProvider>

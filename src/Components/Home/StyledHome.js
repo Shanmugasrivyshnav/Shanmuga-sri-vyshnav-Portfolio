@@ -125,16 +125,16 @@ export const HomeAction = styled.a`
   font-weight: 700;
   transition: all 0.25s ease;
   border: 2px solid transparent;
-  color: ${(props) => (props.secondary ? props.theme.colorText : "#ffffff")};
+  color: ${(props) => (props.$secondary ? props.theme.colorText : "#ffffff")};
   background: ${(props) =>
-    props.secondary ? props.theme.colorCard : props.theme.colorAccent};
+    props.$secondary ? props.theme.colorCard : props.theme.colorAccent};
   box-shadow: ${(props) =>
-    props.secondary ? "none" : "0 18px 30px rgba(99, 102, 241, 0.24)"};
+    props.$secondary ? "none" : "0 18px 30px rgba(99, 102, 241, 0.24)"};
 
   &:hover {
     transform: translateY(-1px);
     background: ${(props) =>
-      props.secondary ? props.theme.colorAccentSoft : "#4f46e5"};
+      props.$secondary ? props.theme.colorAccentSoft : "#4f46e5"};
   }
 `;
 

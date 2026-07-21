@@ -79,9 +79,9 @@ export const HeaderElementsContainer = styled.nav`
     padding: 20px;
     background-color: ${(props) => props.theme.colorBgSecondary};
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    max-height: ${(props) => (props.isOpen ? "400px" : "0")};
+    max-height: ${(props) => (props.$isOpen ? "400px" : "0")};
     overflow: hidden;
-    visibility: ${(props) => (props.isOpen ? "visible" : "hidden")};
+    visibility: ${(props) => (props.$isOpen ? "visible" : "hidden")};
   }
 `;
 

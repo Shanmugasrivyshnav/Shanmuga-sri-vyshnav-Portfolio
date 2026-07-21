@@ -42,18 +42,17 @@ const NavBar = ({ isDarkMode, toggleTheme }) => {
         </NavLink>
       </HeaderImageContainer>
 
-      <MobileMenuBtn onClick={toggleMenu} isDarkMode={isDarkMode}>
+      <MobileMenuBtn onClick={toggleMenu}>
         {isMobileMenuOpen ? <RiCloseLine /> : <RiMenu5Line />}
       </MobileMenuBtn>
 
-      <HeaderElementsContainer isOpen={isMobileMenuOpen}>
+      <HeaderElementsContainer $isOpen={isMobileMenuOpen}>
         <HeaderElement
           as={NavLink}
           to="/"
           end
           className={({ isActive }) => (isActive ? "active" : undefined)}
           onClick={() => setIsMobileMenuOpen(false)}
-          isDarkMode={isDarkMode}
         >
           <HeaderElementIcons>
             <MdHomeFilled />
@@ -65,7 +64,6 @@ const NavBar = ({ isDarkMode, toggleTheme }) => {
           to="/about"
           className={({ isActive }) => (isActive ? "active" : undefined)}
           onClick={() => setIsMobileMenuOpen(false)}
-          isDarkMode={isDarkMode}
         >
           <HeaderElementIcons>
             <MdCoPresent />
@@ -77,7 +75,6 @@ const NavBar = ({ isDarkMode, toggleTheme }) => {
           to="/projects"
           className={({ isActive }) => (isActive ? "active" : undefined)}
           onClick={() => setIsMobileMenuOpen(false)}
-          isDarkMode={isDarkMode}
         >
           <HeaderElementIcons>
             <MdDashboard />
@@ -86,10 +83,9 @@ const NavBar = ({ isDarkMode, toggleTheme }) => {
         </HeaderElement>
         <HeaderElement
           as={NavLink}
-          to="/certifecates"
+          to="/certificates"
           className={({ isActive }) => (isActive ? "active" : undefined)}
           onClick={() => setIsMobileMenuOpen(false)}
-          isDarkMode={isDarkMode}
         >
           <HeaderElementIcons>
             <MdWorkspacePremium />
@@ -101,7 +97,6 @@ const NavBar = ({ isDarkMode, toggleTheme }) => {
           to="/contact"
           className={({ isActive }) => (isActive ? "active" : undefined)}
           onClick={() => setIsMobileMenuOpen(false)}
-          isDarkMode={isDarkMode}
         >
           <HeaderElementIcons>
             <MdContactMail />
@@ -113,14 +108,13 @@ const NavBar = ({ isDarkMode, toggleTheme }) => {
           to="/resume"
           className={({ isActive }) => (isActive ? "active" : undefined)}
           onClick={() => setIsMobileMenuOpen(false)}
-          isDarkMode={isDarkMode}
         >
           <HeaderElementIcons>
             <MdDownload />
           </HeaderElementIcons>
           Resume
         </HeaderElement>
-        <ThemeToggleBtn onClick={toggleTheme} isDarkMode={isDarkMode}>
+        <ThemeToggleBtn onClick={toggleTheme}>
           {isDarkMode ? (
             <>
               <MdLightMode /> Light

@@ -114,10 +114,10 @@ const Home = () => {
           <HomeAction as={Link} to="/projects">
             View Projects <MdArrowForward size={20} />
           </HomeAction>
-          <HomeAction as={Link} to="/certifecates">
+          <HomeAction as={Link} to="/certificates">
             View Certificates <MdArrowForward size={20} />
           </HomeAction>
-          <HomeAction as={Link} to="/contact" secondary>
+          <HomeAction as={Link} to="/contact" $secondary>
             Contact Me
           </HomeAction>
         </HomeActions>

@@ -38,7 +38,7 @@ export const CertificateCarousel = styled.div`
 export const CertificateTrack = styled.div`
   display: flex;
   transition: transform 0.45s ease;
-  transform: translateX(${(props) => props.activeIndex * -100}%);
+  transform: translateX(${(props) => props.$activeIndex * -100}%);
 `;
 
 export const CertificateSlide = styled.div`

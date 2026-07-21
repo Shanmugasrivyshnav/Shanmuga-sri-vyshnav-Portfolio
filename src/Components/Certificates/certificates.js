@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { getCertifications } from "../../services/api.js";
 import {
   CertificateSection,
   SectionHeader,
@@ -18,7 +17,7 @@ import {
   CarouselButton,
   CarouselSlideList,
   CarouselSlide,
-} from "./StyledCertifecates";
+} from "./StyledCertifecates.js";
 
 const defaultCertificates = [
   {
@@ -103,29 +102,9 @@ const defaultCertificates = [
   },
 ];
 
-const Certifecates = () => {
-  const [certificates, setCertificates] = useState(defaultCertificates);
+const Certificates = () => {
+  const [certificates] = useState(defaultCertificates);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchCertifications = async () => {
-      try {
-        setLoading(true);
-        const data = await getCertifications();
-        if (data && Array.isArray(data) && data.length > 0) {
-          setCertificates(data);
-        }
-      } catch (err) {
-        console.warn("Failed to fetch certifications, using defaults:", err);
-        setCertificates(defaultCertificates);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchCertifications();
-  }, []);
 
   useEffect(() => {
     if (certificates.length === 0) return;
@@ -157,14 +136,8 @@ const Certifecates = () => {
         </SectionIntro>
       </SectionHeader>
 
-      {loading && (
-        <div style={{ textAlign: "center", padding: "2rem", color: "#666" }}>
-          <p>Loading certifications...</p>
-        </div>
-      )}
-
       <CertificateCarousel>
-        <CertificateTrack activeIndex={activeIndex}>
+        <CertificateTrack $activeIndex={activeIndex}>
           {certificates.map((certificate) => (
             <CertificateSlide key={certificate.title}>
               <CertificateCard>
@@ -209,4 +182,4 @@ const Certifecates = () => {
   );
 };
 
-export default Certifecates;
+export default Certificates;
