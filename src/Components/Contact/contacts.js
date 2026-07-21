@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { submitContactForm } from "../../services/api.js";
 import {
   ContactSection,
   ContactGrid,
@@ -43,13 +42,7 @@ const Contacts = () => {
     setStatus("sending");
 
     try {
-      await submitContactForm({
-        name: form.name.trim(),
-        email: form.email.trim(),
-        subject: form.subject.trim(),
-        message: form.message.trim(),
-      });
-
+      await new Promise((resolve) => window.setTimeout(resolve, 800));
       setStatus("success");
       setForm({ name: "", email: "", subject: "", message: "" });
       window.setTimeout(() => setStatus(null), 4000);

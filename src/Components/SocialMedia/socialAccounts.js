@@ -43,7 +43,7 @@ const socials = [
   },
 ];
 
-const ScocialAccount = () => {
+const SocialAccount = () => {
   return (
     <SocialSection id="socials">
       <SectionHeader>
@@ -59,7 +59,7 @@ const ScocialAccount = () => {
           const Icon = social.icon;
           return (
             <SocialLinkItem key={social.label}>
-              <SocialLink href={social.href} target="_blank" rel="noreferrer">
+              <SocialLink href={social.href} target="_blank" rel="_blank">
                 <Icon size={22} />
                 {social.label}
               </SocialLink>
@@ -71,4 +71,4 @@ const ScocialAccount = () => {
   );
 };
 
-export default ScocialAccount;
+export default SocialAccount;
