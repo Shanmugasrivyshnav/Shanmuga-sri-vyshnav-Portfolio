@@ -11,7 +11,7 @@ import {
   AboutListItem,
   AboutLabel,
   AboutValue,
-} from "./StyledAboutMe.js";
+} from "./StyledAboutMe";
 
 import { BsCheckCircleFill } from "react-icons/bs";
 
