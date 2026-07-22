@@ -49,10 +49,10 @@ export const CertificateSlide = styled.div`
 
 export const CertificateCard = styled.div`
   background: ${(props) => props.theme.colorCard};
-  border: 1px solid ${(props) => props.theme.colorBorder};
-  border-radius: 24px;
-  padding: 36px 32px;
-  box-shadow: ${(props) => props.theme.shadow};
+  border: 10px solid ${(props) => props.theme.colorAccentSoft};
+  border-radius: 30px;
+  padding: 35px 30px;
+  box-shadow: ${(props) => props.theme.colorShadow};
   min-height: 320px;
   display: flex;
   flex-direction: column;
@@ -122,7 +122,7 @@ export const CarouselButton = styled.button`
 
   &:hover {
     background: ${(props) => props.theme.colorAccentSoft};
-    transform: translateY(-1px);
+    transform: translateY(-5px);
   }
 `;
 
@@ -136,6 +136,7 @@ export const CarouselSlideList = styled.div`
 export const CarouselSlide = styled.button`
   width: 50px;
   height: 6px;
+  border-radius: 65% 35% 70% 30% / 30% 70% 30% 70%;
   // border-radius: 50%;
   border: none;
   background: ${(props) =>
