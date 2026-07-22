@@ -23,7 +23,7 @@ const contactDetails = [
   { label: "Phone", value: "Click To Know", href: "tel:+917995247940" },
   {
     label: "Location",
-    value: "Anantapur, Andhra Pradesh",
+    value: "Anantapur, AndhraPradesh",
     href: "https://maps.google.com/?q=Anantapur",
   },
 ];
@@ -70,7 +70,7 @@ const Contacts = () => {
                 key={item.label}
                 href={item.href}
                 target="_blank"
-                rel="noreferrer"
+                rel="no-referrer"
               >
                 <strong>{item.label}:</strong> {item.value}
               </ContactInfoItem>
