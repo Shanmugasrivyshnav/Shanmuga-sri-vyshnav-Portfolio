@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Seo from "../Seo/Seo";
 import {
   ContactSection,
   ContactGrid,
@@ -28,6 +29,8 @@ const contactDetails = [
   },
 ];
 
+const FORM_ENDPOINT = "https://formspree.io/f/xvzevnrp";
+
 const Contacts = () => {
   const [form, setForm] = useState({
     name: "",
@@ -42,7 +45,16 @@ const Contacts = () => {
     setStatus("sending");
 
     try {
-      await new Promise((resolve) => window.setTimeout(resolve, 800));
+      const response = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new URLSearchParams(form),
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
       setStatus("success");
       setForm({ name: "", email: "", subject: "", message: "" });
       window.setTimeout(() => setStatus(null), 4000);
@@ -55,6 +67,11 @@ const Contacts = () => {
 
   return (
     <ContactSection id="contact">
+      <Seo
+        title="Contact | Shanmuga Sri Vyshnav"
+        description="Get in touch with Shanmuga Sri Vyshnav for full-time roles, freelance work, or project collaboration."
+        path="/contact"
+      />
       <ContactGrid>
         <ContactCard>
           <ContactTitle>Let's Work Together</ContactTitle>
