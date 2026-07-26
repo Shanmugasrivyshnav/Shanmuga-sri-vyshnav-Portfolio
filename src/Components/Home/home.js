@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Seo from "../Seo/Seo";
+import PersonSchema from "../Seo/PersonSchema";
+
 import {
   HomeSection,
   HomeContent,
@@ -31,10 +34,10 @@ const featureTags = [
   "CSS",
   "HTML",
 ];
-const stats = [
+const status = [
   { value: "3", label: "Years Experience in Core" },
   { value: "10+", label: "Projects" },
-  { value: "7+", label: "Technologies" },
+  { value: "5+", label: "Technologies" },
 ];
 const titlesJobs = [
   "Full Stack Developer",
@@ -74,7 +77,7 @@ const Home = () => {
       return () => clearInterval(timer);
     };
 
-    const Experience = animateValue(3, 2500, setYearsExp);
+    const Experience = animateValue(3, 1500, setYearsExp);
     const Projects = animateValue(10, 1500, setProjects);
     const Technologies = animateValue(5, 1500, setTechnologies);
 
@@ -87,6 +90,12 @@ const Home = () => {
 
   return (
     <HomeSection>
+      <Seo
+        title="Shanmuga Sri Vyshnav | Full Stack Developer Portfolio"
+        description="Portfolio of Shanmuga Sri Vyshnav — full-stack developer specializing in React and Node.js. Explore projects, skills, certifications, and experience."
+        path="/"
+      />
+      <PersonSchema />
       <HomeContent>
         <HomeBadge>
           <HomeBadgeText>{titlesJobs[jobTitles]}</HomeBadgeText>
@@ -123,18 +132,18 @@ const Home = () => {
         </HomeActions>
 
         <HomeStats>
-          {stats.map((stat) => {
+          {status.map((start) => {
             const value =
-              stat.label === "Years Experience"
+              start.label === "Years Experience"
                 ? `${yearsExp}`
-                : stat.label === "Projects"
+                : start.label === "Projects"
                   ? `${projects}+`
                   : `${technologies}+`;
 
             return (
-              <HomeStat key={stat.label}>
+              <HomeStat key={start.label}>
                 <HomeStatValue>{value}</HomeStatValue>
-                <HomeStatLabel>{stat.label}</HomeStatLabel>
+                <HomeStatLabel>{start.label}</HomeStatLabel>
               </HomeStat>
             );
           })}

@@ -1,6 +1,6 @@
 {
-  "short_name": "KGSSV portfolio",
-  "name": "KGSSV portfolio",
+  "short_name": "KGSSV Portfolio",
+  "name": "Shanmuga Sri Vyshnav Portfolio",
   "icons": [
     {
       "src": "./web-logo-shannu-png.png",
@@ -11,11 +11,6 @@
       "src": "./web-logo-shannu-png.png",
       "type": "image/png",
       "sizes": "512x512"
-    },
-    {
-      "src": "./web-logo-shannu-png.png",
-      "type": "image/png",
-      "sizes": "1024x1024"
     }
   ],
   "start_url": ".",

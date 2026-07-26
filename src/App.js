@@ -15,6 +15,10 @@ import Contacts from "./Components/Contact/contacts.js";
 import SocialAccount from "./Components/SocialMedia/socialAccounts.js";
 import Resume from "./Components/Resume/resume.js";
 import Footer from "./Components/Footer/footer.js";
+import PrivacyPolicy from "./Components/Legal/privacyPolicy.js";
+import TermsAndConditions from "./Components/Legal/termsAndConditions.js";
+import CookiePolicy from "./Components/Legal/cookiePolicy.js";
+import NotFound from "./Components/NotFound/notFound.js";
 
 import "./App.css";
 import { GlobalStyle } from "./StyledApp.js";
@@ -70,6 +74,13 @@ const App = () => {
           <Route path="/contact" element={<Contacts />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route
+            path="/terms-and-conditions"
+            element={<TermsAndConditions />}
+          />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <SocialAccount />
         <Footer />
