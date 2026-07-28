@@ -49,4 +49,27 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+/* this for scrool bar custumise to full screen */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: ${(props) => props.theme.colorScroll};
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: ${(props) => props.theme.colorScroll};
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: ${(props) => props.theme.shadow};
+    scrollbar-color: ${(props) => props.theme.colorScroll};
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color:${(props) => props.theme.colorAccent} ${(props) => props.theme.colorAccent};
+  }
 `;

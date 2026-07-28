@@ -88,7 +88,7 @@ export const CertificateLink = styled.a`
   padding: 12px 20px;
   border-radius: 999px;
   background: ${(props) => props.theme.colorAccent};
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 700;
   transition:

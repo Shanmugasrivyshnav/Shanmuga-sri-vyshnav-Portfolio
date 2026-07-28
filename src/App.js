@@ -47,6 +47,7 @@ const darkTheme = {
   colorText: "#e2e8f0",
   colorTextMuted: "#94a3b8",
   colorAccent: "#6366f1",
+  colorScroll: "#000000",
   colorAccentSoft: "rgba(99, 102, 241, 0.12)",
   textureLine: "rgba(255,255,255,0.06)",
   textureLineSoft: "rgba(255,255,255,0.03)",
