@@ -48,7 +48,7 @@ export const FooterLink = styled.a`
   color: ${(props) => props.theme.colorText};
   font-weight: 600;
   transition: color 0.25s ease;
-
+  behavior: smooth;
   &:hover {
     color: ${(props) => props.theme.colorAccent};
   }
