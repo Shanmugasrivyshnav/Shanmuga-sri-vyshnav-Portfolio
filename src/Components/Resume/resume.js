@@ -18,7 +18,7 @@ const Resume = () => {
         </ResumeText>
         <ResumeTitle>Full-Stack Resume Download</ResumeTitle>
         <ResumeButton
-          href="/KG ShanmugaSriVyshnav-FullStack-Resume.pdf"
+          href="/KG_SHANMUGA_SRI_VYSHNAV eds.pdf"
           download="ShanmugaSriVyshnav-Full-Stack-Resume.pdf"
         >
           Download Resume
