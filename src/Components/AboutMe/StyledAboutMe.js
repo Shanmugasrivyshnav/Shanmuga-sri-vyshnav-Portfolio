@@ -77,6 +77,7 @@ export const AboutListItem = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 12px;
+
   padding: 14px 16px;
   border-radius: 16px;
   background: ${(props) => props.theme.colorBg};
