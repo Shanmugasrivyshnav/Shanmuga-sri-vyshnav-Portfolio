@@ -91,16 +91,39 @@ export const HomeDescription = styled.p`
   line-height: 1.9;
 `;
 
+export const lineani = keyframes`
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+`;
+
 export const HomeTagList = styled.div`
+  width: 50%;
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 30px;
+  gap: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+
+  @media (max-width: 880px) {
+    width: 100%;
+  }
+`;
+export const HomeTagTrack = styled.div`
+  display: flex;
+  width: max-content;
+  gap: 20px;
+  animation: ${lineani} 7s linear infinite;
 `;
 
 export const HomeTag = styled.span`
   display: inline-flex;
-  padding: 10px 14px;
+  flex: 0 0 auto;
+  padding: 2px 25px 2px 25px;
   border-radius: 999px;
   border: 1px solid ${(props) => props.theme.colorBorder};
   background: ${(props) => props.theme.colorCard};
