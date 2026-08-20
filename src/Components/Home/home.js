@@ -118,7 +118,6 @@ const Home = () => {
             <HomeTag key={tag}>{tag}</HomeTag>
           ))}
         </HomeTagList>
-
         <HomeActions>
           <HomeAction as={Link} to="/projects">
             View Projects <MdArrowForward size={20} />
@@ -130,7 +129,6 @@ const Home = () => {
             Contact Me
           </HomeAction>
         </HomeActions>
-
         <HomeStats>
           {status.map((start) => {
             const value =
