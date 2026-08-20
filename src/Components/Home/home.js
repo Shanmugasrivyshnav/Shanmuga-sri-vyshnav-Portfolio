@@ -13,7 +13,6 @@ import {
   HomeDescription,
   HomeTagList,
   HomeTag,
-  HomeTagTrack,
   HomeActions,
   HomeAction,
   HomeStats,
@@ -29,7 +28,6 @@ import { MdArrowForward } from "react-icons/md";
 const featureTags = [
   "JavaScript",
   "React Js ",
-  "React Native",
   "Node Js",
   "SQL",
   "Python",
@@ -116,11 +114,9 @@ const Home = () => {
         </HomeDescription>
 
         <HomeTagList>
-          <HomeTagTrack>
-            {featureTags.map((tag) => (
-              <HomeTag key={tag}>{tag}</HomeTag>
-            ))}
-          </HomeTagTrack>
+          {featureTags.map((tag) => (
+            <HomeTag key={tag}>{tag}</HomeTag>
+          ))}
         </HomeTagList>
 
         <HomeActions>
@@ -134,6 +130,7 @@ const Home = () => {
             Contact Me
           </HomeAction>
         </HomeActions>
+
         <HomeStats>
           {status.map((start) => {
             const value =
