@@ -1,0 +1,97 @@
+[33mcommit 7fe9dcd56200efb1cdd3bbce5f4876f83ad8c571[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: shanmukha <shanmukhasri00@gmail.com>
+Date:   Wed Aug 19 17:32:51 2026 +0530
+
+    added animation to tag list home
+
+[1mdiff --git a/src/Components/Home/StyledHome.js b/src/Components/Home/StyledHome.js[m
+[1mindex 685472a..4637d76 100644[m
+[1m--- a/src/Components/Home/StyledHome.js[m
+[1m+++ b/src/Components/Home/StyledHome.js[m
+[36m@@ -91,16 +91,39 @@[m [mexport const HomeDescription = styled.p`[m
+   line-height: 1.9;[m
+ `;[m
+ [m
+[32m+[m[32mexport const lineani = keyframes`[m
+[32m+[m[32m  0% {[m
+[32m+[m[32m    transform: translateX(100%);[m
+[32m+[m[32m  }[m
+[32m+[m
+[32m+[m[32m  100% {[m
+[32m+[m[32m    transform: translateX(-100%);[m
+[32m+[m[32m  }[m
+[32m+[m[32m`;[m
+[32m+[m
+ export const HomeTagList = styled.div`[m
+[32m+[m[32m  width: 50%;[m
+   display: flex;[m
+[31m-  flex-wrap: wrap;[m
+[31m-  gap: 10px;[m
+[31m-  margin-bottom: 30px;[m
+[32m+[m[32m  gap: 20px;[m
+[32m+[m[32m  margin-bottom: 20px;[m
+[32m+[m[32m  overflow: hidden;[m
+[32m+[m[32m  position: relative;[m
+[32m+[m
+[32m+[m[32m  @media (max-width: 880px) {[m
+[32m+[m[32m    width: 100%;[m
+[32m+[m[32m  }[m
+[32m+[m[32m`;[m
+[32m+[m[32mexport const HomeTagTrack = styled.div`[m
+[32m+[m[32m  display: flex;[m
+[32m+[m[32m  width: max-content;[m
+[32m+[m[32m  gap: 20px;[m
+[32m+[m[32m  animation: ${lineani} 7s linear infinite;[m
+ `;[m
+ [m
+ export const HomeTag = styled.span`[m
+   display: inline-flex;[m
+[31m-  padding: 10px 14px;[m
+[32m+[m[32m  flex: 0 0 auto;[m
+[32m+[m[32m  padding: 2px 25px 2px 25px;[m
+   border-radius: 999px;[m
+   border: 1px solid ${(props) => props.theme.colorBorder};[m
+   background: ${(props) => props.theme.colorCard};[m
+[1mdiff --git a/src/Components/Home/home.js b/src/Components/Home/home.js[m
+[1mindex 908c7ee..4b6a4c0 100644[m
+[1m--- a/src/Components/Home/home.js[m
+[1m+++ b/src/Components/Home/home.js[m
+[36m@@ -13,6 +13,7 @@[m [mimport {[m
+   HomeDescription,[m
+   HomeTagList,[m
+   HomeTag,[m
+[32m+[m[32m  HomeTagTrack,[m
+   HomeActions,[m
+   HomeAction,[m
+   HomeStats,[m
+[36m@@ -28,6 +29,7 @@[m [mimport { MdArrowForward } from "react-icons/md";[m
+ const featureTags = [[m
+   "JavaScript",[m
+   "React Js ",[m
+[32m+[m[32m  "React Native",[m
+   "Node Js",[m
+   "SQL",[m
+   "Python",[m
+[36m@@ -114,9 +116,11 @@[m [mconst Home = () => {[m
+         </HomeDescription>[m
+ [m
+         <HomeTagList>[m
+[31m-          {featureTags.map((tag) => ([m
+[31m-            <HomeTag key={tag}>{tag}</HomeTag>[m
+[31m-          ))}[m
+[32m+[m[32m          <HomeTagTrack>[m
+[32m+[m[32m            {featureTags.map((tag) => ([m
+[32m+[m[32m              <HomeTag key={tag}>{tag}</HomeTag>[m
+[32m+[m[32m            ))}[m
+[32m+[m[32m          </HomeTagTrack>[m
+         </HomeTagList>[m
+ [m
+         <HomeActions>[m
+[36m@@ -130,7 +134,6 @@[m [mconst Home = () => {[m
+             Contact Me[m
+           </HomeAction>[m
+         </HomeActions>[m
+[31m-[m
+         <HomeStats>[m
+           {status.map((start) => {[m
+             const value =[m
