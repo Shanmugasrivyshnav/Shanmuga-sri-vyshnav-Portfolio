@@ -91,6 +91,21 @@ export const HomeDescription = styled.p`
   line-height: 1.9;
 `;
 
+const tagAnimation = keyframes`
+  0% {
+    transform: translateY(20%);
+  }
+  50%{
+    transform:translateY(-30%);
+  }
+  70%{
+    transform:translateY(-50%);
+  }
+  100% {
+    transform: translateY(70%);
+  }
+`;
+
 export const HomeTagList = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -107,6 +122,7 @@ export const HomeTag = styled.span`
   color: ${(props) => props.theme.colorTextMuted};
   font-size: 14px;
   font-weight: 600;
+  animation: ${tagAnimation} 1s linear infinite;
 `;
 
 export const HomeActions = styled.div`
