@@ -26,6 +26,8 @@ const GitHubLink = [
   },
 ];
 
+const apkDownloadUrl = process.env.REACT_APP_APK_DOWNLOAD_URL;
+
 // Default fallback projects if API doesn't return data
 const defaultProjectList = [
   {
@@ -101,15 +103,18 @@ const Projects = () => {
           </ProjectCard>
         ))}
       </ProjectsGrid>
-      <ApkExpensiveTracker
-      // href="/app-debug.apk"
-      // download="Daily-expense-tracker.apk"
-      >
-        <DownloadIcon>
-          <MdDownloading />
-        </DownloadIcon>
-        Tracker Daily Expensive
-      </ApkExpensiveTracker>
+      {apkDownloadUrl && (
+        <ApkExpensiveTracker
+          href={apkDownloadUrl}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <DownloadIcon>
+            <MdDownloading />
+          </DownloadIcon>
+          Tracker Daily Expensive
+        </ApkExpensiveTracker>
+      )}
       <MoreOnGitHubContainer>
         <HeadingGitHub>More on GitHub Repository</HeadingGitHub>
         <LinkGitHub
