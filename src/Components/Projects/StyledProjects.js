@@ -145,3 +145,24 @@ export const LinkGitHub = styled.a`
     background: #4f46e5;
   }
 `;
+export const ApkExpensiveTracker = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 32px;
+  border-radius: 999px;
+  background: #f2300a;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  margin: 10px;
+
+  &:hover {
+    transform: translateY(-1px);
+    background: #f2310acf;
+  }
+`;
+export const DownloadIcon = styled.span`
+  padding: 6px 10px 0 0;
+`;

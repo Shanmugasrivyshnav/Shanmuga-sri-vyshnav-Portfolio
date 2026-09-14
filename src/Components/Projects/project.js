@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { MdDownloading } from "react-icons/md";
 import {
   ProjectsSection,
   SectionHeader,
@@ -15,6 +16,8 @@ import {
   MoreOnGitHubContainer,
   HeadingGitHub,
   LinkGitHub,
+  ApkExpensiveTracker,
+  DownloadIcon,
 } from "./StyledProjects";
 
 const GitHubLink = [
@@ -26,18 +29,32 @@ const GitHubLink = [
 // Default fallback projects if API doesn't return data
 const defaultProjectList = [
   {
+    title: "Tracker Daily Expensive",
+    description:
+      "Track expenses and spending with incoming and outgoing messages once you receive and get.",
+    tags: ["React Native", "JS", "CSS"],
+    github: "",
+  },
+  {
     title: "Portfolio Website",
     description:
       "A responsive personal portfolio to showcase projects, skills, and contact details.",
-    tags: ["React", "Styled Components", "Responsive"],
+    tags: ["React.js", "Styled Components", "Responsive"],
     github:
       "https://github.com/Shanmugasrivyshnav/Shanmuga-sri-vyshnav-Portfolio",
+  },
+  {
+    title: "Expense Manage UI",
+    description: "Adding expenses with own for tracking what we have spending.",
+    tags: ["React.js", "CSS", "JS"],
+    github:
+      "https://github.com/Shanmugasrivyshnav/basic-expensive-manager_React",
   },
   {
     title: "Crypto Currency UI",
     description:
       "A Frontend cryptocurrency to showcase  Prices and Crypto details.",
-    tags: ["React", "Responsive"],
+    tags: ["React.js", "Responsive"],
     github: "https://github.com/Shanmugasrivyshnav/cryptocurrency-ui-React-",
   },
   {
@@ -46,14 +63,6 @@ const defaultProjectList = [
       "A basic of Login page with react UI with username and password.",
     tags: ["Node.js", "Express", "MongoDB"],
     github: "https://github.com/Shanmugasrivyshnav/basic_login-app_React",
-  },
-  {
-    title: "Expense Tracker UI",
-    description:
-      "Track expenses and visualize spending with charts and filters.",
-    tags: ["React", "CSS", "JS"],
-    github:
-      "https://github.com/Shanmugasrivyshnav/basic-expensive-manager_React",
   },
 ];
 
@@ -92,6 +101,15 @@ const Projects = () => {
           </ProjectCard>
         ))}
       </ProjectsGrid>
+      <ApkExpensiveTracker
+        href="/app-debug.apk"
+        download="Daily-expense-tracker.apk"
+      >
+        <DownloadIcon>
+          <MdDownloading />
+        </DownloadIcon>
+        Tracker Daily Expensive
+      </ApkExpensiveTracker>
       <MoreOnGitHubContainer>
         <HeadingGitHub>More on GitHub Repository</HeadingGitHub>
         <LinkGitHub
