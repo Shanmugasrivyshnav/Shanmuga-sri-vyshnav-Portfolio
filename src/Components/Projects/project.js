@@ -28,7 +28,6 @@ const GitHubLink = [
 
 const apkDownloadUrl = process.env.REACT_APP_APK_DOWNLOAD_URL;
 
-// Default fallback projects if API doesn't return data
 const defaultProjectList = [
   {
     title: "Tracker Daily Expensive",
@@ -55,7 +54,7 @@ const defaultProjectList = [
   {
     title: "Crypto Currency UI",
     description:
-      "A Frontend cryptocurrency to showcase  Prices and Crypto details.",
+      "A Frontend cryptocurrency to showcase Prices and Crypto details.",
     tags: ["React.js", "Responsive"],
     github: "https://github.com/Shanmugasrivyshnav/cryptocurrency-ui-React-",
   },
@@ -92,13 +91,15 @@ const Projects = () => {
               ))}
             </ProjectTags>
             <ProjectLinks>
-              <ProjectLink
-                href={project.github}
-                target="_blank"
-                rel="noreferrer"
-              >
-                View Code
-              </ProjectLink>
+              {project.github && (
+                <ProjectLink
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View Code
+                </ProjectLink>
+              )}
             </ProjectLinks>
           </ProjectCard>
         ))}
@@ -120,7 +121,7 @@ const Projects = () => {
         <LinkGitHub
           href={GitHubLink[0].gitHublink}
           target="_blank"
-          alt="Link of GitHub"
+          rel="noreferrer"
         >
           Click to view Repositories
         </LinkGitHub>
