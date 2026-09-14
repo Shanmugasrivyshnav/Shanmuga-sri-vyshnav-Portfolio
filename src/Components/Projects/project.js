@@ -26,7 +26,8 @@ const GitHubLink = [
   },
 ];
 
-const apkDownloadUrl = process.env.REACT_APP_APK_DOWNLOAD_URL;
+const apkDownloadUrl =
+  "https://github.com/Shanmugasrivyshnav/Shanmuga-sri-vyshnav-Portfolio/releases/download/Daily-Expense-Tracker/app-debug.apk";
 
 const defaultProjectList = [
   {
