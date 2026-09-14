@@ -23,3 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 public/app-debug.apk
 public/app-debug.apk
+public/app-debug.apk
+asset/app-debug.apk

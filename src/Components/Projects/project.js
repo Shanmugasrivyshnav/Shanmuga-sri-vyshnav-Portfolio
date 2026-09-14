@@ -102,8 +102,8 @@ const Projects = () => {
         ))}
       </ProjectsGrid>
       <ApkExpensiveTracker
-        href="/app-debug.apk"
-        download="Daily-expense-tracker.apk"
+      // href="/app-debug.apk"
+      // download="Daily-expense-tracker.apk"
       >
         <DownloadIcon>
           <MdDownloading />
