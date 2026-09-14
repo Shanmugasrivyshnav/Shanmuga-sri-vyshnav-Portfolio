@@ -1,10 +1,5 @@
 import { useState } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import NavBar from "./Components/Header/navBar.js";
 import Home from "./Components/Home/home.js";
@@ -74,7 +69,6 @@ const App = () => {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contacts />} />
           <Route path="/resume" element={<Resume />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route
             path="/terms-and-conditions"

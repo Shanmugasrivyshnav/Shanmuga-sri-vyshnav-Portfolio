@@ -35,7 +35,7 @@ const defaultProjectList = [
     description:
       "Track expenses and spending with incoming and outgoing messages once you receive and get.",
     tags: ["React Native", "JS", "CSS"],
-    github: "",
+    github: "https://github.com/Shanmugasrivyshnav/Daily-Expensive-Tracker",
   },
   {
     title: "Portfolio Website",
