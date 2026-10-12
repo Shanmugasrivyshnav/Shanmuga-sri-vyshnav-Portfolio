@@ -21,7 +21,7 @@ export const HomeContent = styled.div`
 
 const shine = keyframes`
   0% {
-    transform: translateX(-120%);
+    transform: translateX(120%);
   }
   50% {
     transform: translateX(120%);
@@ -93,16 +93,22 @@ export const HomeDescription = styled.p`
 
 const tagAnimation = keyframes`
   0% {
-    transform: translateY(20%);
+    transform: translateX(-20%);
+  }
+  30%{
+    transform:transalteX(-70%);
   }
   50%{
-    transform:translateY(-30%);
+    transform:translateX(-30%);
   }
+  65%{
+    transform:translateX(45%);
+  }  
   70%{
-    transform:translateY(-50%);
+    transform:translateX(50%);
   }
   100% {
-    transform: translateY(70%);
+    transform: translateX(70%);
   }
 `;
 
