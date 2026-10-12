@@ -14,7 +14,7 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
-
+import { MdContactMail } from "react-icons/md";
 const socials = [
   {
     label: "GitHub",
@@ -40,6 +40,11 @@ const socials = [
     label: "Twitter",
     href: "https://x.com/shanmukha_sri_",
     icon: FaTwitter,
+  },
+  {
+    label: "Contact",
+    href: "./Contact",
+    icon: MdContactMail,
   },
 ];
 
